@@ -14,9 +14,7 @@ export default function Home() {
             <h1 className="text-3xl font-extrabold text-center text-gray-900">
               Welcome to E-commerce
             </h1>
-            <p className="text-lg text-gray-600 text-center mt-4">
-              This is a sample website. You can customize it as per your needs.
-            </p>
+            <Image src="/images/logo.gif" width={50} height={50} className="w-1/3 md:w-1/6 mx-auto pt-5" alt="Logo" />
             <form className="max-w-sm mx-auto py-10 space-y-3">
               <div className="relative">
                 <input
@@ -48,7 +46,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex justify-between">
-                <div class="flex items-center me-4">
+                <div className="flex items-center me-4">
                   <input
                    
                     id="purple-checkbox"
@@ -57,7 +55,7 @@ export default function Home() {
                     className="w-4 h-4 text-fuchsia-600 bg-gray-100 border-gray-300 rounded focus:ring-fuchsia-500 dark:focus:ring-fuchsia-600 dark:ring-offset-gray-800  dark:bg-gray-700 dark:border-gray-600"
                   />
                   <label
-                    for="purple-checkbox"
+                    htmlFor="purple-checkbox"
                     className="ms-2 text-sm font-medium text-fuchsia-500 dark:text-fuchsia-600"
                   >
                     Remember me
