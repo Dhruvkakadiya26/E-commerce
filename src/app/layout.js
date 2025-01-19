@@ -1,3 +1,4 @@
+import Script from "next/script";
 import "./globals.css";
 import "./style.css";
 
@@ -10,6 +11,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
+      <Script
+        src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"
+        strategy="beforeInteractive" // Ensures the script is loaded early
+      />
         {children}
       </body>
     </html>

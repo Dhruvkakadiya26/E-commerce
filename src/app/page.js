@@ -6,90 +6,46 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div>
-      <div className="flex h-screen">
-        <div className="hidden md:flex md:w-6/12 login_bg"></div>
+     
 
-        <div className="flex w-full md:w-6/12 justify-center items-center">
-          <div>
-            <h1 className="text-3xl font-extrabold text-center text-gray-900">
-              Welcome to E-commerce
-            </h1>
-            <Image src="/images/logo.gif" width={50} height={50} className="w-1/3 md:w-1/6 mx-auto pt-5" alt="Logo" />
-            <form className="max-w-sm mx-auto py-10 space-y-3">
-              <div className="relative">
-                <input
-                  type="email"
-                  className="peer py-3 px-4 ps-11 block w-full bg-purple-100 border-transparent rounded-lg text-sm focus:border-fuchsia-200 focus:ring-fuchsia-200 focus:outline focus:outline-2 focus:outline-fuchsia-200 disabled:opacity-50 disabled:pointer-events-none"
-                  placeholder="Enter name"
-                />
-                <div className="absolute inset-y-0 start-0 flex items-center pointer-events-none ps-4 peer-disabled:opacity-50 peer-disabled:pointer-events-none">
-                  <Icon
-                    path={mdiAccount}
-                    size={0.8}
-                    className="text-gray-400"
-                  />
-                </div>
-              </div>
+<nav className="bg-white border-gray-200 dark:bg-gray-900">
+  <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+  <a href="https://flowbite.com/" className="flex items-center space-x-3 rtl:space-x-reverse">
+  <Image src="/images/logo.gif" width={20} height={20} className="w-1/6 md:w-[45px]" alt="Logo" />
+      <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">E-commerce</span>
+  </a>
+  <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+      <button type="button" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Get started</button>
+      <button data-collapse-toggle="navbar-cta" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-cta" aria-expanded="false">
+        <span className="sr-only">Open main menu</span>
+        <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15"/>
+        </svg>
+    </button>
+  </div>
+  <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
+    <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+      <li>
+        <a href="#" className="block py-2 px-3 md:p-0 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:dark:text-blue-500" aria-current="page">Home</a>
+      </li>
+      <li>
+        <a href="#" className="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
+      </li>
+      <li>
+        <a href="#" className="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
+      </li>
+      <li>
+        <a href="#" className="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+      </li>
+    </ul>
+  </div>
+  </div>
+</nav>
 
-              <div className="relative">
-                <input
-                  type="password"
-                  className="peer py-3 px-4 ps-11 block w-full bg-purple-100 border-transparent rounded-lg text-sm focus:border-fuchsia-200 focus:ring-fuchsia-200 focus:outline focus:outline-2 focus:outline-fuchsia-200 disabled:opacity-50 disabled:pointer-events-none"
-                  placeholder="Enter password"
-                />
-                <div className="absolute inset-y-0 start-0 flex items-center pointer-events-none ps-4 peer-disabled:opacity-50 peer-disabled:pointer-events-none">
-                  <Icon
-                    path={mdiKeyVariant}
-                    size={0.7}
-                    className="text-gray-400"
-                  />
-                </div>
-              </div>
-              <div className="flex justify-between">
-                <div className="flex items-center me-4">
-                  <input
-                   
-                    id="purple-checkbox"
-                    type="checkbox"
-                    value=""
-                    className="w-4 h-4 text-fuchsia-600 bg-gray-100 border-gray-300 rounded focus:ring-fuchsia-500 dark:focus:ring-fuchsia-600 dark:ring-offset-gray-800  dark:bg-gray-700 dark:border-gray-600"
-                  />
-                  <label
-                    htmlFor="purple-checkbox"
-                    className="ms-2 text-sm font-medium text-fuchsia-500 dark:text-fuchsia-600"
-                  >
-                    Remember me
-                  </label>
-                </div>
-                <div className="text-sm">
-                  <Link
-                    href="#"
-                    className="font-semibold text-fuchsia-600 hover:text-fuchsia-500"
-                  >
-                    Forgot password?
-                  </Link>
-                </div>
-              </div>
-              <button
-                type="submit"
-                className="flex w-full justify-center items-center py-2.5 text-sm font-medium text-white bg-fuchsia-400 rounded-lg border border-fuchsia-500 hover:bg-fuchsia-500 focus:ring-4 focus:outline-none focus:ring-purple-300 dark:bg-fuchsia-400 dark:hover:bg-fuchsia-500 dark:focus:ring-fuchsia-500"
-              >
-                <Icon path={mdiLogin} size={0.8} className="me-2" />
-                Login
-              </button>
-            </form>
-            <div className="text-sm text-center">
-              Not a Member?
-                  <Link
-                    href="#"
-                    className="ms-2 font-semibold text-fuchsia-600 hover:text-fuchsia-500"
-                  >
-                    Register Now!
-                  </Link>
-                </div>
-          </div>
-        </div>
-      </div>
+
+
+
+
     </div>
   );
 }
